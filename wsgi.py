@@ -10,8 +10,12 @@ def hello():
     fh.writelines(lines_of_text)
     fh.close()
     
-    return "Hello World! Greetings from "+socket.gethostname()+"\n"
+    #return "Hello World! Greetings from "+socket.gethostname()+"\n"
 
+    fh = open("/mnt/hello.txt", "r")
+    for i in fh:
+        s = i
+    return s
 
 if __name__ == "__main__":
     application.run()
