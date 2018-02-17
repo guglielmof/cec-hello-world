@@ -14,8 +14,9 @@ def hello():
     #return "Hello World! Greetings from "+socket.gethostname()+"\n"
 
     fh = open("/mnt/hello.txt", "r")
+    s =""
     for i in fh:
-        s = i
+        s += i
     return s
 
 if __name__ == "__main__":
