@@ -10,7 +10,7 @@ def hello():
     ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     fh = open("/mnt/logfile.txt", "a")
-    lines_of_text = ""+socket.gethostname()+": "+st+"<br\>"
+    lines_of_text = ""+socket.gethostname()+": "+st+"<br>"
     fh.writelines(lines_of_text)
     fh.close()
 
