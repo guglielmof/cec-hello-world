@@ -9,7 +9,7 @@ application = Flask(__name__)
 def hello():
     ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-    fh = open("/mnt/logfile.txt", "a")
+    fh = open("/mnt/logfile.txt", "w")
     lines_of_text = ""+socket.gethostname()+": "+st+"<br>"
     fh.writelines(lines_of_text)
     fh.close()
