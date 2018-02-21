@@ -21,7 +21,7 @@ def hello():
     for i in fh:
         s += i
     fh.close()
-    return "<p style='col:red size:14px'>Hello World! Greetings from "+socket.gethostname()+"</p>"+s
+    return "<p style='color:red; font-size:14px'>Hello World! Greetings from "+socket.gethostname()+"</p>"+s
 
 if __name__ == "__main__":
     application.run()
