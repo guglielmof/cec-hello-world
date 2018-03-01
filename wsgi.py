@@ -19,7 +19,7 @@ def hello():
     fh = open("/mnt/logfile.txt", "r")
     s =""
     for i in fh:
-        s += i+"<br>"
+        s += (i+"<br>")
     fh.close()
     return "<p style='color:red; font-size:20px'>Hello World! Greetings from "+socket.gethostname()+"</p>"+s
 
