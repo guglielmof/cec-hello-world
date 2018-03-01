@@ -9,8 +9,8 @@ application = Flask(__name__)
 def hello():
     ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-    fh = open("/mnt/logfile.txt", "a")
-    lines_of_text = ""+socket.gethostname()+": "+st+"<br>"
+    fh = open("/mnt/logfile.txt", "w")
+    lines_of_text = ""+socket.gethostname()+": "+st
     fh.writelines(lines_of_text)
     fh.close()
 
@@ -19,7 +19,7 @@ def hello():
     fh = open("/mnt/logfile.txt", "r")
     s =""
     for i in fh:
-        s += i
+        s += i+"<br>"
     fh.close()
     return "<p style='color:red; font-size:20px'>Hello World! Greetings from "+socket.gethostname()+"</p>"+s
 
